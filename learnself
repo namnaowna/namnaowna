@@ -1,0 +1,154 @@
+package leanself;
+
+public class Datatype {
+//    public static void main(String[] args) {
+//        double grade = 2.15; //เก็บค่าเป็นทศนิยม
+//        String name = "028"; //เก็บค่าเป็นข้อความ
+//        boolean isLogin = false; //เก็บได้แค่สองค่า True หรือ False
+//    }
+    public static void main(String[] args) {
+        
+        //ข้อ 1
+//        double latitude = 13.5555;
+//        double Longitude = 100.5555;
+//        String outputText = "(" + latitude + "," + Longitude + ")";
+//        System.out.println(outputText);
+
+        //ข้อ2
+//          String numberText = "23";
+//          int number = Integer.parseInt(numberText); //เปลี่ยน text เป็น ตัวเลข
+//          System.out.println(number + 5);
+
+        //ข้อ3
+          String numberText = "23.75";
+          double number = Double.parseDouble(numberText); //เปลี่ยน text เป็น ตัวเลข
+          System.out.println(number + 5);
+    }
+}
+
+
+
+
+public class Loop {
+    public static void main(String[] args) {
+        //ข้อ 1 แสดงตัวเลขตั้งแต่ 11 ถึง 20
+//        for (int i = 11; i <= 20 ; i++) {
+//            System.out.println(i);
+//        }
+        
+        //ข้อ 2 หาผลรวมของตัวเลขตั้งแต่ 2 ถึง 12
+//        int sumNumber = 0;
+//        
+//        for (int i =2 ; i<=12 ; i++) {
+//            sumNumber += i;
+//        }
+//        System.out.println(sumNumber);
+        
+        //ข้อ 3 หาผลรวมของเลขคู่ในช่วง 1 ถึง 10 
+//        int sumNumber = 0;
+//        
+//        for (int i = 1 ; i <= 10 ; i++) {
+//            if (i % 2 != 0) {
+//                continue; //เจอใน Loop ใช้ข้าม
+//            }
+//            sumNumber += i;
+//        }
+//        System.out.println(sumNumber);
+        
+        //ข้อ 4 หาผลรวมของเลขตั้งแต่ 2 ถึง 22 ถ้าเจอเลข ที่ลงท้ายด้วย 0 เมื่อไหร่ ให้หยุดคำนวณและออกจากลูปทันที
+        int sumNumber = 0;
+        
+        for (int i = 2 ; i <= 22 ; i++) {
+            if (i % 10 == 0) {
+                break; //คำสั่งออกจาก Loop
+            }
+            sumNumber += i;
+        }
+        System.out.println(sumNumber);
+        
+        
+        
+    }
+    
+}
+
+
+
+
+
+public class Operators {
+    public static void main(String[] args) {
+        //เครื่องหมายคำนวณตัวเลข
+        // ข้อ 1 บวก ลบ คูณ หาร หารหาเศษ
+//        double firstNumber = 15;
+//        double secondNumber = 4;
+//        System.out.println(firstNumber + secondNumber);
+//        System.out.println(firstNumber - secondNumber);
+//        System.out.println(firstNumber * secondNumber);
+//        System.out.println(firstNumber / secondNumber);
+//        System.out.println(firstNumber % secondNumber);
+
+        // ข้อ 2 บวกบวก ลบลบ บวกเท่ากับ หารเท่ากับ(Shortcut)
+//        double firstName = 15;
+////        firstName++; //บวกเพิ่มไป 1
+////        firstName--; //ลบไป 1
+////        firstName+= 3; //บวกเพิ่มไปอีก 3
+//        firstName /= 2; //หารกับ 2
+//        System.out.println(firstName);
+
+        
+         //เครื่องหมายคำนวณเปรียบเทียบ
+         //ข้อ 1 มากกว่า น้อยกว่า เท่ากับ ไม่เท่ากับ (เปรียบเทียบตัวเลข) > < >= <= == !=
+//            double firstNumber = 10;
+//            double secondNumber = 15;
+//            System.out.println(firstNumber > secondNumber);
+//            System.out.println(firstNumber < secondNumber);
+//            System.out.println(firstNumber >= secondNumber);
+//            System.out.println(firstNumber <= secondNumber);
+//            System.out.println(firstNumber == secondNumber);
+//            System.out.println(firstNumber != secondNumber);
+
+
+         //ข้อ 2 AND OR NOT (ตรรกศาสตร์)
+         boolean isUsernameCorrect = true;
+         boolean isPasswordCorrect = false;
+         System.out.println(isUsernameCorrect && isPasswordCorrect);
+         System.out.println(isUsernameCorrect || isPasswordCorrect);
+         System.out.println(!isUsernameCorrect);
+         
+         
+    }
+    
+}
+
+public class Variables {
+    public static void main(String[] args) {
+        int height = 154;
+        System.out.println(height);
+        int weight = 44;
+        System.out.println(weight);
+    }
+}
+
+
+
+public class Conditions {
+    public static void main(String[] args) {
+    double originalPrice = 20000;
+    double finalPrice = originalPrice;
+
+    if (originalPrice >= 10000) {
+        finalPrice = originalPrice - 0.15 * originalPrice; //(0.15 * originalPrice) ราคาส่วนลด 15% 
+    } else if (originalPrice >= 6000 ) {
+        finalPrice = originalPrice - 0.10 * originalPrice;
+    } else if (originalPrice >= 3000 ) {
+        finalPrice = originalPrice - 0.08 * originalPrice;
+    } else {
+        finalPrice = originalPrice - 0.05 * originalPrice;
+    }
+    
+        System.out.println(finalPrice);
+    }
+   
+   
+}
